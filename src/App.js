@@ -16,6 +16,14 @@ function App() {
   useEffect(() => {
     dispatch(getCartItems());
   }, []);
+  
+  if (isLoading) {
+    return (
+      <div className='loading'>
+        <h1>Loading...</h1>
+      </div>
+    );
+  }
 
   return (
     <main>
